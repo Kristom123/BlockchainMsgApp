@@ -8,14 +8,20 @@ import Loader from "./Loader/Loader";
 import Model from "./Model/Model";
 import UserCard from "./UserCard/UserCard";
 import Friend from "./Friend/Friend";
-
-export { NavBar, Filter, Error, Loader, Model, UserCard, Friend };
 */
+import { NavBar, Filter, Error, Loader, Model, UserCard, Friend } from "../Components/index";
+
 import { ChatAppContext } from "../Context/ChatAppContext";
 
 const index = () => {
   const {title} = useContext(ChatAppContext);
-  return <div>{title}</div>;
+  return (
+  <div>
+    <Filter />
+    <Friend />
+    {title}
+  </div>
+  );
 };
 
 export default index;
