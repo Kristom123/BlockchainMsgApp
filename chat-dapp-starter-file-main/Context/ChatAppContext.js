@@ -34,11 +34,12 @@ export const ChatAppProvider = ({children}) => {
             const friendLists = await contract.getMyFriendList();
             setFriendList(friendLists);
 
-            const userList = await contract.getAllAppUser();
+            const userList = await contract.getAllUsersFunc();
             setUserLists(userList);
 
         } catch (error) {
             setError("Please install and/or connect wallet");
+            console.log(error);
         }
     }
     useEffect(() => {
@@ -51,6 +52,7 @@ export const ChatAppProvider = ({children}) => {
             const contract = await connectingToContract();
             const read = await contract.readMessage(friendAddress);
             setFriendMsg(read);
+            console.log(read);
         } catch (error) {
             setError("You have no messages")
         }
@@ -59,8 +61,10 @@ export const ChatAppProvider = ({children}) => {
     // SENDING MSG
     const sendMsg = async(msg, address) => {
         try {
-            if (msg || accountAddress) return setError("Must enter fields");
             
+            console.log(msg);
+            // if (msg || address) return setError("Must enter fields");
+
             const contract = await connectingToContract();
             const newMessage = await contract.sendMsg(address, msg);
             setLoading(true);
@@ -68,7 +72,8 @@ export const ChatAppProvider = ({children}) => {
             setLoading(false);
             window.location.reload();
         } catch (error) {
-            setError("Please refresh the page and try again")
+            setError("Please refresh the page and try again");
+            console.log(error);
         }
     }
 
@@ -76,9 +81,9 @@ export const ChatAppProvider = ({children}) => {
     const createAccount = async(name, accountAddress) => {
         try {
             // if (name || accountAddress) return setError("Must enter fields");
-            
+        
             const contract = await connectingToContract();
-            const getCreatedUser = await contract.createAccount(name);
+            const getCreatedUser = await contract.createAccount(String(name));
             setLoading(true);
             await getCreatedUser.wait();
             setLoading(false);
@@ -91,7 +96,10 @@ export const ChatAppProvider = ({children}) => {
     // ADDING FRIENDS
     const addFriends = async(name, accountAddress) => {
         try {
-            if (name || accountAddress) return setError("Must enter fields");
+            // if (name || accountAddress) return setError("Must enter fields");
+
+            console.log(String(name));
+            console.log(accountAddress);
             
             const contract = await connectingToContract();
             const addNewFriend = await contract.addFriend(accountAddress, name);
@@ -101,6 +109,7 @@ export const ChatAppProvider = ({children}) => {
             window.location.reload();
         } catch (error) {
             setError("Adding Friends Error")
+            console.log(error);
         }
     }
 

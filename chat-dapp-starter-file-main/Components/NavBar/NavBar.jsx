@@ -18,20 +18,8 @@ const NavBar = () => {
       link: "/",
     },
     {
-      menu: "Contact",
-      link: "/",
-    },
-    {
-      menu: "Settings",
-      link: "/",
-    },
-    {
-      menu: "FAQ",
-      link: "/",
-    },
-    {
-      menu: "Terms of Service",
-      link: "/",
+      menu: "Profile",
+      link: "/profile",
     },
   ]
 
@@ -100,6 +88,7 @@ const NavBar = () => {
             image={images.hero}
             functionName={createAccount}
             address={account}
+            username={username}
           />
         </div>
       )}

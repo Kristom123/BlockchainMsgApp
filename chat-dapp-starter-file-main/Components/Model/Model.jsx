@@ -6,11 +6,11 @@ import images from "../../assets";
 import { ChatAppContext } from "../../Context/ChatAppContext";
 import { Loader } from "../../Components/index";
 
-const Model = ({openModel, title, head, info, subInfo, image, functionName, address}) => {
+const Model = ({openModel, title, head, info, subInfo, image, functionName, address, username}) => {
   const [name, setName] = useState("");
-  const [acctAddress, setAcctAddress] = useState("");
+  const [accountAddress, setAccountAddress] = useState("");
 
-  const { loading } = useContext(ChatAppContext);
+  const { loading, createAccount } = useContext(ChatAppContext);
 
   return (
     <div className={Style.Model}>
@@ -32,15 +32,14 @@ const Model = ({openModel, title, head, info, subInfo, image, functionName, addr
               <div className={Style.Model_box_right_name}>
             <div className={Style.Model_box_right_name_info}>
               <Image src={images.username} alt="user" width={30} height={30} />
-              <input type='text' placeholder="Enter Your preferred name" onChange={(e)=>setName(e.target.value)}/>
+              <input id="name-input" type="text" placeholder={username || "Enter your username"} onChange={(e)=>setName(String(e.target.value))}/>
             </div>
             <div className={Style.Model_box_right_name_info}>
               <Image src={images.account} alt="user" width={30} height={30} />
-              <input type='text' placeholder={address || "Enter Your Account Address"} onChange={(e)=>setAcctAddress(e.target.value)}/>
+              <input type='text' placeholder={address || "Enter Your Account Address"} onChange={(e)=>setAccountAddress(e.target.value)}/>
             </div>
-
             <div className={Style.Model_box_right_name_btn}>
-              <button onClick={() => functionName({ name, acctAddress })}>
+              <button onClick={() => functionName(document.getElementById("name-input").value, {accountAddress})}>
                 {""}
                 <Image src={images.send} alt="send" width={30} height={30} />
                 {""}

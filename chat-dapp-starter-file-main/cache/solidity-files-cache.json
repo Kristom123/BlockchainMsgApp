@@ -2,7 +2,7 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/kristinethomas/Documents/BlockchainMsgApp/chat-dapp-starter-file-main/contracts/ChatApp.sol": {
-      "lastModificationDate": 1713199701090,
+      "lastModificationDate": 1713306265933,
       "contentHash": "edd318fb046b83673aa0d3b7692b1015",
       "sourceName": "contracts/ChatApp.sol",
       "solcConfig": {
