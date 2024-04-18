@@ -49,6 +49,7 @@ export const ChatAppProvider = ({children}) => {
     // READING MSG
     const readMsg = async(friendAddress) => {
         try {
+            console.log(friendAddress);
             const contract = await connectingToContract();
             const read = await contract.readMessage(friendAddress);
             setFriendMsg(read);
@@ -61,12 +62,14 @@ export const ChatAppProvider = ({children}) => {
     // SENDING MSG
     const sendMsg = async(msg, address) => {
         try {
-            
+            console.log("hello");
             console.log(msg);
             // if (msg || address) return setError("Must enter fields");
-
+            const _msg = String(msg.message);
+            console.log(_msg);
+            
             const contract = await connectingToContract();
-            const newMessage = await contract.sendMsg(address, msg);
+            const newMessage = await contract.sendMsg(address, _msg);
             setLoading(true);
             await newMessage.wait();
             setLoading(false);

@@ -18,7 +18,8 @@ const Chat = ({ functionName, readMessage, friendMsg, account, username, loading
     setChatInfo(router.query)
   }, [router.isReady]);
 
-  console.log(router.query.address);
+  console.log(friendMsg);
+  console.log(friendMsg)
 
   const friend_addr = router.query.address;
 
@@ -46,26 +47,40 @@ const Chat = ({ functionName, readMessage, friendMsg, account, username, loading
                     <div className={Style.Chat_sub_box_left_title}>
                       <Image src={images.accountName} alt="image" width={50} height={50}/>
                       <span>
-                        {chatInfo.name} {""}
-                        <small>{convertTime(el.timestamp)}</small>
+                        {currentUsername} {""}
+                        <div>
+                          <small>{convertTime(el.timestamp)}</small>
+                        </div>
                       </span>
+                      <div className={Style.Chat_sub_box_right_you}>
+                        <p key= {i + 1} >
+                          {el.msg}
+                          {""} 
+                          {""}
+                        </p>
+                      </div>
                     </div>
                   ) 
                   : 
                   (
-                    <div className={Style.Chat_sub_box_left_title}>
-                      <Image src={images.accountName} alt="image" width={50} height={50}/>
+                    <div className={Style.Chat_sub_box_right_title}>
+                      <div></div>
+                      <div className={Style.Chat_sub_box_right_me}>
+                        <p key= {i + 1} >
+                          {el.msg}
+                          {""} 
+                          {""}
+                        </p>
+                      </div>
                       <span>
                         {username} {""}
-                        <small>{convertTime(el.timestamp)}</small>
+                        <div>
+                          <small>{convertTime(el.timestamp)}</small>
+                        </div>
                       </span>
+                      <Image src={images.accountName} alt="image" width={50} height={50}/>
                     </div>
                   )}
-                  <p key= {i + 1} >
-                    {el.msg}
-                    {""} 
-                    {""}
-                  </p>
                 </div>
               ))
             }
