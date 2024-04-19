@@ -78,18 +78,31 @@ const NavBar = () => {
 
       {/* MODEL */}
       {openModel && (
+        
         <div className={Style.model_box}>
+
+          <div className={Style.circle}>
+            <Image src={images.ellipse2} alt="circle2" width={240} height={170} />
+          </div>
+          
+          
+          
+
           <Model 
             openModel={setOpenModel}
-            title = "Hey! This is"
-            head = "APP NAME"
-            info = "Interested in chatting with your college peers and classmates? You're in the right place!"
-            subInfo = "Enter your name"
+          //  title = "Hey! This is"
+          //  head = "APP NAME"
+           // info = "Interested in chatting with your college peers and classmates? You're in the right place!"
+          //  subInfo = "Enter your name"
             image={images.hero}
             functionName={createAccount}
             address={account}
             username={username}
+            
           />
+          
+          {/* <img src="https://i.postimg.cc/gjLQgbq0/Vector-1.png" alt="Image" class="background-image"></img> */}
+          {/* <div className={Style.fullWidthImage}></div> */}
         </div>
       )}
       {error == "" ? "" : <Error error={error} />}

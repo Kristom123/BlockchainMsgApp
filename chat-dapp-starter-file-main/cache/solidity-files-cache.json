@@ -1,9 +1,9 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/kristinethomas/Documents/BlockchainMsgApp/chat-dapp-starter-file-main/contracts/ChatApp.sol": {
-      "lastModificationDate": 1713306265933,
-      "contentHash": "edd318fb046b83673aa0d3b7692b1015",
+    "C:\\Users\\Pranavi\\BlockchainMsgApp\\chat-dapp-starter-file-main\\contracts\\ChatApp.sol": {
+      "lastModificationDate": 1713374105652,
+      "contentHash": "ae83f023303f2f84b2bfe434fad1a37d",
       "sourceName": "contracts/ChatApp.sol",
       "solcConfig": {
         "version": "0.8.17",

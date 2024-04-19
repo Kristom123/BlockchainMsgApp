@@ -54,10 +54,28 @@
 
 .model_box {
     position: fixed;
+    
     inset: 0 0 0 0;
-    background-color: #292F3F;
+    /* background-color: #292F3F; */
+    background-color: #00509D;
     z-index: 77777777;
 }
+
+.circle {
+    position: absolute;
+    top: 1px; 
+    left: 80px; 
+    z-index: -2; 
+    
+}
+
+/* .fullWidthImage {
+    position: relative;
+    background-image: url('https://i.postimg.cc/gjLQgbq0/Vector-1.png');
+    background-size: cover; /* Cover the entire container */
+    /* background-position: center; Center the image */
+    /* height: 100vh; Make the container full height of the viewport */
+  /* }  */
 
 @media only screen and (max-width: 35em) {
     .NavBar{
@@ -82,7 +100,8 @@
     .NavBar_box_right_menu {
         position: fixed;
         z-index: 111111;
-        background-color: #292F3F;
+        /* background-color: #292F3F; */
+        background-color: #00509D;
         width: 100%;
         flex-direction: 100vh;
         height: 100vh;
