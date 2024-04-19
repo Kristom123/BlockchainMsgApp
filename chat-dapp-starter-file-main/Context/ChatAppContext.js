@@ -54,6 +54,7 @@ export const ChatAppProvider = ({children}) => {
             const read = await contract.readMessage(friendAddress);
             setFriendMsg(read);
             console.log(read);
+            console.log(read);
         } catch (error) {
             setError("You have no messages")
         }
@@ -85,6 +86,7 @@ export const ChatAppProvider = ({children}) => {
         try {
             // if (name || accountAddress) return setError("Must enter fields");
         
+        
             const contract = await connectingToContract();
             const getCreatedUser = await contract.createAccount(String(name));
             setLoading(true);
@@ -99,7 +101,7 @@ export const ChatAppProvider = ({children}) => {
     // ADDING FRIENDS
     const addFriends = async(name, accountAddress) => {
         try {
-            // if (name || accountAddress) return setError("Must enter fields");
+            if (name || accountAddress) return setError("Must enter fields");
 
             console.log(String(name));
             console.log(accountAddress);

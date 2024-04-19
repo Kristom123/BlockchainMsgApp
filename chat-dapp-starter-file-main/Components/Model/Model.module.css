@@ -1,12 +1,36 @@
 .Model {
     width: 85%;
     margin: 1rem auto;
-}
+    
+    /* background-color: #00509D; */
+} 
 
 .Model_box{
     display: grid;
     grid-template-columns: 1.4fr 1fr;
     align-items: center;
+
+   
+
+    
+}
+
+.backgroundimage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.Model_box_right{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; 
+    position: relative;
+    margin-left: auto;
 }
 
 .Model_box_right h1{
@@ -26,45 +50,102 @@
 }
 
 .Model_box_right_name_info {
+    
     display: flex;
+    
     align-items: center;
     margin-block: 1rem;
     gap: 1rem;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: #00509D;
     padding: 1rem;
-    border-radius: 0.5rem;
+    border: 2.5px solid #fff;
+   
+    /* border-radius: 0.5rem; */
+    border-radius: 10px;
+    
     cursor: pointer;
+    color: #fff;
+
+    
+    padding-right: 80px;
+    
+    padding-left: 30px;
+
+    /* ------------*/
+    /* width: 100%; */
+    /* padding: 8px 40px 8px 35px; /* Adjust padding as needed */
+    /* border: 2.0px solid #fff;
+    border-radius: 4px;
+    background-color: #00509D;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif; */
+    /* background-size: 20px; Adjust size as needed */
+    /* background-repeat: no-repeat;  */
+    /* background-position: 10px center;    */
+    
 }
+
+.Model_box_right_name_info input::placeholder {
+    color: white;
+}
+
 
 .Model_box_right_name_info input{
     width: 100%;
     background-color: transparent;
     outline: none;
     border: none;
-    color: #F18303;
+    color: #fff;
+    margin-right: 50px;
+
+
+   
 }
 
 .Model_box_right_name_btn{
     display: grid;
     grid-template-columns: repeat(r, 1fr);
     gap: 1rem;
+
+   
 }
 
 .Model_box_right_name_btn button{
     outline: none;
     border: none;
-    color: #F18303;
+    color: #0D2867;
     font-size: 1.2rem;
     font-weight: 700;
     text-transform: uppercase;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: #fff;
     padding: 1rem;
-    border-radius: 0.5rem;
+    /* border-radius: 0.5rem; */
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+.textlogo{
+    max-width: 2000px; /* Set the maximum width of the image */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Ensure it's displayed as a block element */
+  margin: 0 auto 20px;
+}
+.Model_box_right_name_info::placeholder {
+    color: #fff !important;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.circle1 {
+    position: absolute;
+    bottom: 95px; 
+    right: 0.01px; 
+    z-index: -2; 
+    
 }
 
 @media only screen and (max-width: 35em) {
