@@ -48,11 +48,11 @@ const Model = ({openModel, title, head, info, subInfo, image, functionName, addr
             <div className={Style.Model_box_right_name_info}>
             
               <Image src={images.user} alt="user" width={30} height={30} />
-              <input id="name-input" type="text" placeholder={username || "Email"} onChange={(e)=>setName(String(e.target.value))} style={{ color: 'white' }}/>
+              <input id="name-input" type="text" placeholder={username || "Username"} onChange={(e)=>setName(String(e.target.value))} style={{ color: 'white' }}/>
             </div>
             <div className={Style.Model_box_right_name_info}>
               <Image src={images.lock} alt="user" width={30} height={30} />
-              <input type='text' placeholder={address || "Password"} onChange={(e)=>setAccountAddress(e.target.value)}/>
+              <input type='text' placeholder={address || "Key"} onChange={(e)=>setAccountAddress(e.target.value)}/>
             </div>
             <div className={Style.Model_box_right_name_btn}>
               <button onClick={() => functionName(document.getElementById("name-input").value, {accountAddress})}>

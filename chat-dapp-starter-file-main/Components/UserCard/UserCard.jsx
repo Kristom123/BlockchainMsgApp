@@ -23,14 +23,14 @@ const UserCard = ({ el, i, addFriends }) => {
           <h3>{el.name}</h3>
           <p>{el.acctAddress.slice(0,12)}</p>
           <button onClick={() => addFriends(userName, accountAddr)}>
-            Add Friend
+            Message
           </button>
         </div>
       </div>
 
-      <small className={Style.number}>
+      {/* <small className={Style.number}>
         {i+1} 
-      </small>
+      </small> */}
     </div>
   );
 };

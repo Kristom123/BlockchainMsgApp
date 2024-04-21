@@ -10,7 +10,7 @@ const alluser = () => {
     <div>
       <div className={Style.body}>
       <div className={Style.alluser_info}>
-        <h1>Your Friends</h1>
+        <h1>Add New Message</h1>
       </div>
       <div className={Style.alluser}>
         {userLists.map((el, i) => (
