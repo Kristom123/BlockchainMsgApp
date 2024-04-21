@@ -8,15 +8,17 @@ const alluser = () => {
   const { userLists, addFriends } = useContext(ChatAppContext);
   return ( 
     <div>
+      <div className={Style.body}>
       <div className={Style.alluser_info}>
         <h1>Your Friends</h1>
       </div>
-
       <div className={Style.alluser}>
         {userLists.map((el, i) => (
           <UserCard key={i+1} el={el} i={i} addFriends={addFriends} />
         ))}
       </div>
+    </div>
+
     </div>
   );
 };
