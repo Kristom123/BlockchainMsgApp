@@ -7,7 +7,7 @@ module.exports = {
   networks: {
     hardhat: {
       accounts: {
-        mnemonic: "derive vast laundry evoke exotic dwarf mesh disease south fury bean menu",
+        mnemonic: "",
       },
       chainId: 1337,
     },
