@@ -30,7 +30,7 @@ const Chat = ({ functionName, readMessage, friendMsg, account, username, loading
           <Image src={images.accountName} alt="img" width={70} height={70}/>
           <div className={Style.Chat_user_info_box}>
             <h4>{currentUsername}</h4>
-            <p className={Style.show}>{currentUserAddress}</p>
+            <p className={Style.show}>{currentUserAddress.slice(0,12)}</p>
           </div>
         </div>
       ) : (
@@ -90,11 +90,9 @@ const Chat = ({ functionName, readMessage, friendMsg, account, username, loading
         {currentUserAddress && currentUsername ? (
         <div className={Style.Chat_box_send}>
           <div className={Style.Chat_box_send_img}>
-            <Image src={images.smile} alt=":)" width={50} height={50}/>
             <input id="msg-input" type="text" placeholder="Enter message..." 
             onChange={(e) => setMessage(document.getElementById("msg-input").value)}
             />
-            <Image src={images.file} alt="file" width={50} height={50}/>
             {
               loading == true  ? (
                 <Loader />

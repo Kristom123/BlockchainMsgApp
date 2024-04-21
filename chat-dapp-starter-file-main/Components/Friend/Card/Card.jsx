@@ -19,13 +19,11 @@ const Card = ({el, i, readMessage, readUserProfile}) => {
               <h4>{el.name}</h4>
               <small>{el.pubkey.slice(0,12)}</small>
             </div>
-            <div className={Style.Card_box_right_end}>
-              <small>{i+1}</small>
-            </div>
           </div>
         </div>
       </div>
     </Link>
+    
   );
 };
 

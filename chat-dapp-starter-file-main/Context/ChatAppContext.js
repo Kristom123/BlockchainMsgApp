@@ -101,7 +101,7 @@ export const ChatAppProvider = ({children}) => {
     // ADDING FRIENDS
     const addFriends = async(name, accountAddress) => {
         try {
-            if (name || accountAddress) return setError("Must enter fields");
+            //if (name || accountAddress) return setError("Must enter fields");
 
             console.log(String(name));
             console.log(accountAddress);

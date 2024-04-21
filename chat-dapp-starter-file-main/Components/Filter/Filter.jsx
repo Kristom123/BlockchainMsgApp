@@ -1,12 +1,6 @@
 import React, { useState, useContext } from "react";
 import Image from "next/image";
-
-import Style from "./Filter.module.css";
-import images from "../../assets";
-import { ChatAppContext } from "../../Context/ChatAppContext";
-import { Model } from "../index";
-import React, { useState, useContext } from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 import Style from "./Filter.module.css";
 import images from "../../assets";
@@ -32,25 +26,13 @@ const Filter = () => {
             <Image src={images.clear} alt="clear img" width={20} height={20} />
             Clear Chat
           </button> */}
-          <button onClick={() => setAddFriend(true)}>
+          {/* <button onClick={() => setAddFriend(true)}> */}
+          <button>
             <Image src={images.user} alt="clear img" width={20} height={20} />
-            Create New Message
+            <Link href={{pathname: '/alluser'}}>Create New Message</Link>
           </button>
         </div>
       </div>
-
-      {addFriend && (
-        <div>
-          <Model openModel={setAddFriend}
-          title="Welcome to"
-          head="APP NAME"
-          info="you know what it isss - this model pops up when adding a friend"
-          subInfo="yuh yuh"
-          image={images.hero}
-          functionName={addFriends}
-          />
-        </div>
-      )}
     </div>
   );
 };

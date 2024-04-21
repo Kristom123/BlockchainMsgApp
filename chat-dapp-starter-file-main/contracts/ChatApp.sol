@@ -37,7 +37,7 @@ contract ChatApp{
 
     // CREATE ACCOUNT
     function createAccount(string calldata name) external{
-        require(checkUserExists(msg.sender) == false, "User Already Exists");
+        // require(checkUserExists(msg.sender) == false, "User Already Exists");
         require(bytes(name).length > 0, "Username must not be empty");
 
         userList[msg.sender].name = name;

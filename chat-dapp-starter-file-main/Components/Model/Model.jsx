@@ -18,13 +18,8 @@ const Model = ({openModel, title, head, info, subInfo, image, functionName, addr
       <Image src={images.ellipse2} alt="circle2" width={240} height={170} />
       </div> */}
 
-
-
-      
       <div className={Style.Model_box}>
-      
-        
-        
+
         {/* <div className={Style.Model_box_left}>
           <Image src={image} alt="buddy" width={700} height={700} />
           
@@ -64,7 +59,7 @@ const Model = ({openModel, title, head, info, subInfo, image, functionName, addr
                 {""}
                 {/* <Image src={images.send} alt="send" width={30} height={30} /> */}
                 {""}
-                Login
+                Enter
               </button>
               <button onClick={() => openModel(false)}>
                 {""}

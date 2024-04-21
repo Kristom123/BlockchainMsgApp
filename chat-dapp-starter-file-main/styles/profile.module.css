@@ -1,27 +1,170 @@
-.alluser_info{
-    width: 80%;
-    margin: 4rem auto;
-    font-size: 1.5rem;
+.container {
+  background-color: #0D2867;
+  border-radius: 20px;
+  padding: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.alluser{
-    width: 80%;
-    margin: 2rem auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+.card {
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(147, 152, 112, 0.2);
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 }
 
-@media only screen and (max-width: 35em){
-    .alluser_info{
-        width: 90%;
-        font-size: 1rem;
-        margin: 2rem auto;
-    }
+.body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: flex;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  color: #0D2867;
+  font-size: 20px;
+}
 
-    .alluser {
-        width: 90%;
-        grid-template-columns: 1fr;
-    }
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileInfo {
+  text-align: left;
+}
+
+.name {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 100px;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.yellow-circles {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.yellow-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.cornerImage {
+  position: absolute;
+  /* Enable absolute positioning */
+  top: 0;
+  /* Align to the top */
+  left: 0;
+  /* Align to the left */
+  width: 800px;
+  /* Adjust size as needed */
+  height: 200px;
+  /* Adjust size as needed */
+  border-top-left-radius: 20px;
+  z-index: 0;
+}
+
+.circle {
+  position: absolute;
+  /* Enable absolute positioning */
+  bottom: 80px;
+  /* Adjust bottom to place it slightly above the very bottom */
+  right: 30px;
+  /* Adjust right to place it closer to the corner */
+  width: 130px;
+  /* Adjust size as needed */
+  height: 130px;
+  /* Adjust size as needed */
+  border-radius: 50%;
+  /* Make it a circle */
+}
+
+.circle1 {
+  position: absolute;
+  /* Enable absolute positioning */
+  bottom: 10px;
+  /* Align to the very bottom */
+  right: 5px;
+  /* Align to the very right */
+  width: 70px;
+  /* Adjust size as needed */
+  height: 70px;
+  /* Adjust size as needed */
+  border-radius: 50%;
+  /* Make it a circle */
+  padding-right: 2px;
+}
+
+.circle2 {
+  position: absolute;
+  /* Enable absolute positioning */
+  bottom: 210px;
+  /* Align to the very bottom */
+  right: 14px;
+  /* Align to the very right */
+  width: 30px;
+  /* Adjust size as needed */
+  height: 30px;
+  /* Adjust size as needed */
+  border-radius: 50%;
+  /* Make it a circle */
+}
+
+
+.circle3 {
+  position: absolute;
+  /* Enable absolute positioning */
+  bottom: 30px;
+  /* Align to the very bottom */
+  right: 100px;
+  /* Align to the very right */
+  width: 30px;
+  /* Adjust size as needed */
+  height: 30px;
+  /* Adjust size as needed */
+  border-radius: 50%;
+  /* Make it a circle */
+}
+
+
+.circle4 {
+  position: absolute;
+  /* Enable absolute positioning */
+  bottom: 45px;
+  /* Align to the very bottom */
+  right: 160px;
+  /* Align to the very right */
+  width: 65px;
+  /* Adjust size as needed */
+  height: 65px;
+  /* Adjust size as needed */
+  border-radius: 50%;
+  /* Make it a circle */
+}
+
+.profile_pic {
+  width: 100px;
+  /* Adjust size as needed */
+  height: 100px;
+  /* Adjust size as needed */
+  z-index: 99999;
 }

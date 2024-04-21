@@ -1,8 +1,9 @@
 .Chat {
     padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: #fffffd;/*rgba(0, 0, 0, 0.25); */
     border-radius: 0.5rem;
     overflow-y: scroll;
+    color: #00296B;
 }
 
 .Chat_sub_box {
@@ -12,10 +13,15 @@
     width: 80%;
     margin: 0 auto;
     overflow-y: scroll;
+    /* COLOR OF THE MESSAGES */
+    color: #00296B;
 }
 
 .Chat_sub_box_right_me p {
-    background-color: #038af15b;
+    background-color: #FBFBFE;
+    border-width: 2px;
+    border: 2px solid #0D2867;
+    box-shadow: 1px 3px 2px #ddd4d4;
     padding: 1rem;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -28,7 +34,10 @@
     flex-wrap: wrap;
 }
 .Chat_sub_box_right_you p {
-    background-color: #f182035b;
+    background-color: #FFFEEF;
+    border-width: 2px;
+    border: 2px solid #FDC500;
+    box-shadow: 3px 1px 2px #ddd4d4;
     padding: 1rem;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -37,7 +46,6 @@
     position: relative;
     word-wrap: break-word;
     flex-wrap: wrap;
-    max-width: 80%;
 }
 
 .Chat_sub_box_left_title {
@@ -63,15 +71,27 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    /* color: #00296B; */
+    background-color: transparent;
+    color: white;
+    /* background-color: #00296B; */
 }
 .Chat_box_send_img input{
     width: 100%;
-    background-color: #f182035b;
+    background-color: #183B72;
+    /* background-color: transparent; */
+    border-width: 2px;
+    border-block: #0D2867;
+    border: 2px solid #0D2867;
+    box-shadow: 1px 3px 2px #ddd4d4;
     outline: none;
     border: none;
     padding: 1rem;
-    color: #F18203;
+    color: inherit;
     border-radius: 0.5rem;
+}
+.Chat_box_send_img input::placeholder {
+    color: #fff;
 }
 
 .Chat_user_info {

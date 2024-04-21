@@ -1,24 +1,19 @@
 .Model {
     width: 85%;
     margin: 1rem auto;
-    
     /* background-color: #00509D; */
 } 
 
 .Model_box{
     display: grid;
     grid-template-columns: 1.4fr 1fr;
-    align-items: center;
-
-   
-
-    
+    align-items: center; 
 }
 
 .backgroundimage {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
   width: 100%;
   height: auto;
   z-index: -1;
