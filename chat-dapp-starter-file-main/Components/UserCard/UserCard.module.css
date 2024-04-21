@@ -1,9 +1,11 @@
 .UserCard {
-    background-color: rgba(0,0,0,0.25);
-    border-radius: 0.5rem;
+    background-color: #00296b;
+    border-radius: 1.0rem;
     text-align: center;
     padding: 1rem;
     position: relative;
+    font-family: Arial, sans-serif;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .UserCard_box_image {
@@ -15,14 +17,16 @@
 }
 
 .UserCard_box_info button {
-    background-color: rgba(0,0,0,0.25);
-    color: #F18303;
+    background-color: rgba(253,197,0,0.9);
+    color: #00296b;
     width: 50%;
     padding: 1rem;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 1.0rem;
     font-size: 1rem;
     cursor: pointer;
+    font-family: Arial, sans-serif;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 .number {
@@ -30,6 +34,8 @@
     right: 1rem;
     padding: 1rem 1.3rem;
     border-radius: 50%;
-    background-color: #F18303;
+    background-color: #ffd500;
     top: 1rem;
+    font-family: Arial, sans-serif;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
 }

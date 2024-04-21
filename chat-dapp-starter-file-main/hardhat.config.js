@@ -1,5 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox");
-require("dotenv").config();
+//require("dotenv").config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
@@ -7,7 +7,7 @@ module.exports = {
   networks: {
     hardhat: {
       accounts: {
-        mnemonic: process.env.SEED_PHRASE,
+        mnemonic: "derive vast laundry evoke exotic dwarf mesh disease south fury bean menu",
       },
       chainId: 1337,
     },

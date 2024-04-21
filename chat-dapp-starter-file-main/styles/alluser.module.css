@@ -1,7 +1,13 @@
+.body{
+    background-color: #00509d;
+}
+
 .alluser_info{
     width: 80%;
     margin: 4rem auto;
     font-size: 1.5rem;
+    font-family: 'Montseraff', sans-serif;
+    text-align: center;
 }
 
 .alluser{
@@ -11,6 +17,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
+    font-family: Arial, sans-serif;
 }
 
 @media only screen and (max-width: 35em){
