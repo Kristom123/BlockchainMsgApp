@@ -53,6 +53,7 @@ In the MetaMask extension, go to Settings -> Networks -> Add Network. Then click
 <img width="500" alt="metamask-network" src="https://github.com/Kristom123/BlockchainMsgApp/assets/25617730/77719f46-fa76-4dd8-87a0-af09253d6d5d">
 
 Then enter the following details; note that the "New RPC URL" will be produced by the above command, but the URL in the picture should work as well (since the port is the same)
+
 <img width="346" alt="Screenshot 2024-04-22 at 1 09 44 PM" src="https://github.com/Kristom123/BlockchainMsgApp/assets/25617730/99097fdd-ac48-44a6-b7d9-0bd8d6b2edd2">
 
 Ensure MetaMask is connected to that network, and then you will see that all your accounts are now filled with ETH. 
@@ -61,6 +62,10 @@ Ensure MetaMask is connected to that network, and then you will see that all you
 Sometimes MetaMask is weird, in which you may want to mess around with the network (e.g., replace localhost with 127.0.0.1) or click "Clear activity tab data" in Settings -> Advanced
 
 <img width="346" alt="Screenshot 2024-04-22 at 1 13 10 PM" src="https://github.com/Kristom123/BlockchainMsgApp/assets/25617730/f38242b9-b7b3-4016-934f-169e916d0994">
+
+If you are having issues with the `npx hardhat node` command (due to the mnemonic) just copy and paste the secret phrase into the  mnemonic field of the `hardhat.config.js` file (i.e., replace  mnemonic: process.env.SEED_PHRASE, with  mnemonic: "<insert phrase>",
+
+Just be sure not to push it anywhere.
 
 # Thank you so much for checking out our repo!
 
