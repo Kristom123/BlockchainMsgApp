@@ -6,8 +6,7 @@ const Error = ({error}) => {
   return (
     <div className={Style.Error}>
       <div className={Style.Error_box}>
-        <h1>Please review the following error:</h1>
-        {error}
+        <h1>{error}</h1>
       </div>
     </div>
   )

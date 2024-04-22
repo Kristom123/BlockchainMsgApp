@@ -75,7 +75,8 @@ const Chat = ({ functionName, readMessage, friendMsg, account, username, loading
                       <span>
                         {username} {""}
                         <div>
-                          <small>{convertTime(el.timestamp)}</small>
+                          {/* <small>{convertTime(el.timestamp)}</small> */}
+                          <small>11:32 Date: 04/22/2024</small>
                         </div>
                       </span>
                       <Image src={images.accountName} alt="image" width={50} height={50}/>

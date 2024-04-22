@@ -67,7 +67,7 @@ const NavBar = () => {
                       height={20}
                     />
                     {""}
-                    Create Account
+                    Connect to Wallet
                   </button>
                 ) : (
                   <div className={Style.NavBar_box_right_connect}>

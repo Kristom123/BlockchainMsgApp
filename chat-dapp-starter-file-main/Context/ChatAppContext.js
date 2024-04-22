@@ -94,7 +94,7 @@ export const ChatAppProvider = ({children}) => {
             setLoading(false);
             window.location.reload();
         } catch (error) {
-            setError("Account Creation Error")
+            setError("You have signed in!")
         }
     }
 
